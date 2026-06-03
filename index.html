@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생산성 Todo 앱</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>생산성 Todo</h1>
+        </header>
+        
+        <div class="weekly-calendar">
+            <div class="calendar-header">
+                <button id="prev-week-btn" class="icon-btn">◀</button>
+                <h2 id="month-display"></h2>
+                <button id="next-week-btn" class="icon-btn">▶</button>
+            </div>
+            <div class="calendar-days" id="calendar-days">
+                </div>
+        </div>
+
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="새로운 할 일을 입력하세요..." autocomplete="off">
+            <button type="submit" id="add-button">추가</button>
+        </form>
+
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">전체</button>
+            <button class="filter-btn" data-filter="active">진행 중</button>
+            <button class="filter-btn" data-filter="completed">완료</button>
+        </div>
+
+        <ul id="todo-list"></ul>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
